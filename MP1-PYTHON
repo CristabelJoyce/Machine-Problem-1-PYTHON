@@ -1,0 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+f=np.arange(0,100)
+for n in range(len(f)):
+    if f[n]<=9:
+        f[n]=(f[n]**2)-7
+    elif f[n]>=10:
+        f[n]=f[n-10]
+
+plt.stem(f)
+plt.show()
